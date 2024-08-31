@@ -137,7 +137,7 @@ def save_certificate_chain(certs, key, working_dir, name=None):
                     f.write(OpenSSL.crypto.dump_privatekey(filetype, key))
     return pem_cert, pem_key
 
-# Signs a certificate and returns it and its key
+# Signs a certificate and returns it and its  key
 def sign_certificate(cert, key=None, issuer_cert=None, issuer_key=None, keytype="RSA", keysize=2048):
     if not key:
         # Generate RSA/DSA key (Default RSA with 2048 bits)
